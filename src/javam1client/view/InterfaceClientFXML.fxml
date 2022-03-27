@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="865.0" stylesheets="@interfaceCss.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javam1client.controller.InterfaceFXMLController">
+   <children>
+      <ToolBar fx:id="mainToolbar" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#mainToolbarClickedAction" onMouseDragged="#mainToolbarDraggedAction" onMousePressed="#mainToolbarPressedAction" prefHeight="25.0" prefWidth="1046.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <HBox alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="28.0" prefWidth="51.0">
+               <children>
+                  <Button fx:id="windowMin" mnemonicParsing="false" onAction="#windowMinAction" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="windowMax" mnemonicParsing="false" onAction="#windowMaxAction" />
+                  <Button fx:id="windowClose" mnemonicParsing="false" onAction="#windowCloseAction" />
+               </children>
+            </HBox>
+         </items>
+      </ToolBar>
+      <ToolBar fx:id="menuToolbar" layoutX="6.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="1046.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0">
+         <items>
+            <HBox prefHeight="38.0" prefWidth="195.0">
+               <children>
+                  <Label id="etatLbl" fx:id="etatLbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="88.0" text="Offline" textAlignment="CENTER" textFill="#dd0808" wrapText="true">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </items>
+      </ToolBar>
+      <AnchorPane layoutY="80.0" prefHeight="492.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="85.0">
+         <children>
+            <TableView fx:id="clientTable" layoutX="7.0" layoutY="14.0" onKeyReleased="#selectTable" prefHeight="393.0" prefWidth="528.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="335.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="numberCol" prefWidth="150.0" text="Number" />
+                <TableColumn fx:id="nameCol" prefWidth="105.0" text="Name" />
+                  <TableColumn fx:id="adressCol" prefWidth="125.0" text="Adress" />
+                  <TableColumn fx:id="moneyCol" prefWidth="147.0" text="Balance" />
+              </columns>
+            </TableView>
+            <AnchorPane fx:id="crudPane" minHeight="0.0" minWidth="0.0" prefHeight="439.0" prefWidth="336.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label layoutX="8.0" layoutY="58.0" prefHeight="38.0" prefWidth="80.0" text="Number :" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="58.0" />
+                  <Label layoutX="8.0" layoutY="125.0" prefHeight="38.0" prefWidth="80.0" text="Name :" AnchorPane.leftAnchor="15.0" />
+                  <Label layoutX="8.0" layoutY="188.0" prefHeight="38.0" prefWidth="80.0" text="Adress :" AnchorPane.leftAnchor="15.0" />
+                  <TextField fx:id="numberTxt" editable="false" layoutX="129.0" layoutY="58.0" prefHeight="38.0" prefWidth="200.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="58.0" />
+                  <TextField fx:id="nameTxt" layoutX="129.0" layoutY="125.0" prefHeight="38.0" prefWidth="200.0" AnchorPane.rightAnchor="7.0" />
+                  <TextField fx:id="adressTxt" layoutX="129.0" layoutY="188.0" prefHeight="38.0" prefWidth="200.0" AnchorPane.rightAnchor="7.0" />
+                  <Button fx:id="updateBtn" layoutX="134.0" layoutY="316.0" mnemonicParsing="false" onAction="#updateAction" prefHeight="30.0" prefWidth="70.0" text="Update" AnchorPane.leftAnchor="129.0" />
+                  <Button fx:id="deleteBtn" layoutX="252.0" layoutY="316.0" mnemonicParsing="false" onAction="#deleteAction" prefHeight="30.0" prefWidth="70.0" text="Delete" AnchorPane.rightAnchor="14.0" />
+                  <Label layoutX="8.0" layoutY="253.0" prefHeight="38.0" prefWidth="80.0" text="Money :" AnchorPane.leftAnchor="15.0" />
+                  <TextField fx:id="moneyTxt" layoutX="129.0" layoutY="253.0" prefHeight="38.0" prefWidth="200.0" AnchorPane.rightAnchor="7.0" />
+                  <Button fx:id="addBtn" layoutX="11.0" layoutY="316.0" mnemonicParsing="false" onAction="#addAction" prefHeight="30.0" prefWidth="70.0" text="Add" AnchorPane.leftAnchor="15.0" />
+                  <Label fx:id="reponseLbl" layoutX="8.0" layoutY="372.0" prefHeight="48.0" prefWidth="321.0" textFill="#eb0a0a" wrapText="true" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="7.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="4.0" layoutY="1.0" prefHeight="44.0" prefWidth="336.0" text="CRUD  Menu" textFill="#410fff" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="settingPane" prefHeight="493.0" prefWidth="336.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" layoutY="-5.0" prefHeight="44.0" prefWidth="328.0" text="Settings" textAlignment="CENTER" textFill="#410fff" textOverrun="CENTER_ELLIPSIS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="119.0" prefHeight="38.0" prefWidth="90.0" text="Port :" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="119.0" />
+                  <Label layoutX="11.0" layoutY="177.0" prefHeight="38.0" prefWidth="90.0" text="Json File :" AnchorPane.leftAnchor="11.0" />
+                  <TextField fx:id="serverPort" layoutX="135.0" layoutY="119.0" prefHeight="38.0" prefWidth="190.0" text="4000" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="119.0" />
+                  <TextField fx:id="jsonTxt" layoutX="135.0" layoutY="177.0" prefHeight="38.0" prefWidth="190.0" text="jsonData.json" AnchorPane.rightAnchor="11.0" />
+                  <Button fx:id="applyBtn" layoutX="135.0" layoutY="250.0" mnemonicParsing="false" onAction="#applyAction" prefHeight="30.0" prefWidth="70.0" text="Appy" />
+                  <Button fx:id="defaultBtn" layoutX="255.0" layoutY="250.0" mnemonicParsing="false" onAction="#defaultAction" prefHeight="30.0" prefWidth="70.0" text="Default" AnchorPane.rightAnchor="11.0" />
+                  <Label layoutX="21.0" layoutY="119.0" prefHeight="38.0" prefWidth="90.0" text="IP Server :" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="58.0" />
+                  <TextField fx:id="serverIP" layoutX="145.0" layoutY="119.0" prefHeight="38.0" prefWidth="190.0" text="127.0.0.1" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="58.0" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="refreshBtn" layoutX="14.0" layoutY="393.0" mnemonicParsing="false" onAction="#refreshAction" prefHeight="30.0" prefWidth="70.0" text="Refresh" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="14.0" />
+         </children>
+      </AnchorPane>
+      <ProgressIndicator fx:id="prog" disable="true" layoutX="221.0" layoutY="261.0" prefHeight="56.0" prefWidth="70.0" progress="0.0" AnchorPane.bottomAnchor="203.0" AnchorPane.leftAnchor="221.0" AnchorPane.rightAnchor="573.0" AnchorPane.topAnchor="261.0" />
+      <Region fx:id="viel" layoutX="5.0" layoutY="90.0" prefHeight="430.0" prefWidth="526.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="336.0" AnchorPane.topAnchor="88.0" />
+   </children>
+</AnchorPane>

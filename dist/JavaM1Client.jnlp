@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaM1Client.jnlp">
+  <information>
+    <title>JavaM1Client</title>
+    <vendor>Mauyz</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaM1Client.jar" size="59158" download="eager" />
+    <jar href="lib/commons-beanutils-1.8.0.jar" size="231320" download="eager" />
+    <jar href="lib/commons-collections-3.2.1.jar" size="575389" download="eager" />
+    <jar href="lib/commons-httpclient-3.1.jar" size="305001" download="eager" />
+    <jar href="lib/commons-lang-2.5.jar" size="279193" download="eager" />
+    <jar href="lib/commons-logging-1.1.1.jar" size="60686" download="eager" />
+    <jar href="lib/controlsfx-8.40.9.jar" size="1016589" download="eager" />
+    <jar href="lib/dom4j-1.6.1.jar" size="313898" download="eager" />
+    <jar href="lib/ezmorph-1.0.6.jar" size="86487" download="eager" />
+    <jar href="lib/json-lib-2.4-jdk13.jar" size="158091" download="eager" />
+    <jar href="lib/junit-3.8.2.jar" size="120640" download="eager" />
+    <jar href="lib/log4j-1.2.14.jar" size="367444" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="JavaM1Client" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="javam1client.MainApp"  name="JavaM1Client" />
+  <update check="always"/>
+</jnlp>

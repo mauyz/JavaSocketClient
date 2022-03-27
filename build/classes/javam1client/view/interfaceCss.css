@@ -1,0 +1,81 @@
+#rootPane{
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-radius: 5
+}
+#mainToolbar {
+    -fx-background-image: url("images/top-bar.png");
+    -fx-background-size: cover;
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat;
+}
+#menuToolbar {
+    -fx-background-image: url("images/mid-bar-left.png");
+    -fx-background-size: cover;
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat;
+}
+
+#controlToolbar {
+    -fx-background-image: url("images/mid-bar-left.png");
+    -fx-background-size: cover;
+    -fx-background-position: left;
+    -fx-background-repeat: no-repeat;
+}
+
+#windowClose {
+    -fx-font-size: 1px;
+    -fx-background-color: null;
+    -fx-background-image: url("images/window-close.png");
+    -fx-padding: 6 6 4 6;
+}
+#windowMin {
+    -fx-font-size: 1px;
+    -fx-background-color: null;
+    -fx-background-image: url("images/window-min.png");
+    -fx-padding: 6 6 4 6;
+}
+#windowMax {
+    -fx-font-size: 1px;
+    -fx-background-color: null;
+    -fx-background-image: url("images/window-expand.png");
+    -fx-padding: 6 6 4 6;
+}
+#windowClose:hover {
+    -fx-background-image: url("images/window-close-over.png");
+}
+#windowMin:hover {
+    -fx-background-image: url("images/window-min-over.png");
+}
+#windowMax:hover {
+    -fx-background-image: url("images/window-expand-over.png");
+}
+#windowClose:focused, #windowMin:focused , #windowMax:focused {
+    -fx-effect: dropshadow( three-pass-box , -fx-focus-color , 5, 0.7 , 0 , 0 );
+}
+#settingBtn{
+    -fx-background-color: transparent;
+    -fx-border-color: #6e737d ,rgba(255,255,255,0.3);
+}
+
+#refreshBtn:focused,
+#updateBtn:focused,#addBtn:focused,#deleteBtn:focused,
+#applyBtn:focused,#defaultBtn:focused{
+    -fx-border-color: -fx-focus-color;
+    -fx-border-radius: 5;
+    -fx-border-width: 1.4;
+}
+
+#reponseLbl{
+    -fx-alignment: center;
+}
+.button {
+    -fx-background-color: 
+        rgba(255, 255, 255, 0.05),
+        #090a0c,
+        linear-gradient(#242a2e, #23282e),
+        radial-gradient(center 50% 0%, radius 50%, rgba(135,142,148,0.9),
+        rgba(255,255,255,0));
+    -fx-text-fill: white;
+}
